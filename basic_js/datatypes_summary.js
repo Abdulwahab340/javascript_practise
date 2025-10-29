@@ -12,7 +12,7 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherid = Symbol('123')
-console.log(id===anotherid);
+// console.log(id===anotherid);
 
  const bigNumber = 362532764276826328764238763782n
 
@@ -28,3 +28,30 @@ age: 22,
 const myFunction = function(){
     console.log("Hello World");
 }
+// console.log(typeof scorevalue );
+
+
+// ****************************************************************************************************************************************************************************************************************************Memory**************************************************************************
+// there are 2 types of memory     1.Stack(use hoti a primitive ma jitna b types tha   un ma)                                2.Heap(use hoti a non-premitive ma jitna b types tha un ma)
+
+
+
+// 1. Stack::::::
+let myName = "Wahab"
+let anotherName = myName
+anotherName = "Rana"
+console.log(anotherName);
+console.log(myName);
+
+// 2. Heap ::::
+
+let userOne = {
+    email : "user@gmail.com",
+    upi : "user@ybl",
+}
+let userTwo = userOne
+userTwo.email = " Rana@gmail.com"
+console.log(userOne);
+console.log(userTwo);
+
+
