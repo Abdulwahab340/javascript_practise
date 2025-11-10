@@ -22,7 +22,7 @@ const ShopingCart = [
         itemName : "mobile dev course",
         price : 5999
     },
-     {
+    {
         itemName : "data science course",
         price : 12999
     },
