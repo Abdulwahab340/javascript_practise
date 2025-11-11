@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code | DOM</title>
+</head>
+<body style="background-color: grey; color:black">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    // :::::Method 1::::::::
+
+    function addLanguage(langName){
+       const li = document.createElement('li');
+       li.innerHTML=`${langName}`
+       document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    // ::::::Method 2 ::::(Add langauage in optimize way )
+
+    function addoptimizeLanguage(langName){
+        const li = document.createElement('li');
+        // const addText = document.createTextNode(langName)
+        // li.appendChild(addText)
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addoptimizeLanguage("golang")
+
+    //********************************* ::::::Edit Values:::::*****************************************************
+
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="Mojo"
+   const newli = document.createElement('li')
+   newli.textContent="Mojo"
+   secondLang.replaceWith(newli)
+
+//    ::::One more example of:::Edit:::::
+ const firstLang = document.querySelector("li:first-child")
+ firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+  //********************************* ::::::Remove Values:::::*****************************************************
+const lastLang = document.querySelector("li:last-child")
+lastLang.remove()
+
+
+
+
+
+</script>
+</html>
